@@ -25,3 +25,5 @@ Distribution between genres was uneven, so we decided to randomly select 900 son
 After stemming and lemmatizing all the song lyrics and creating a features matrix we were left with an array containing 30,000 features.
 We wanted to see how five basic models, **Multinomial Naive Bayes, Random Forest, AdaBoost, Gradient Boost, K-Nearest Neighbors***, with both stemmed and lemmatized words compare score results and pick lemmatizing over stemmatizing in our five models for future model optimization. The chart below shows our results:
 
+![](https://github.com/Botafogo1894/Project2/blob/master/screenshots/basic_5_models.png)
+
