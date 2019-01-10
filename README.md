@@ -52,4 +52,34 @@ Below you can see the graph of our top three models Final Performance after opti
 
 ![](https://github.com/Botafogo1894/Project3/blob/master/top%203%20models.png)
 
+Our best model, **Gradient Boost after GridSearch yielded 50% accuracy**, which is just about four times better than random guessing, 12.5%. Even though it's not a stellar number, we are still impressed that given only 7200 lyrics we were able to train a model that can predict out of eight genres with 50% accuracy.
 
+From experimenting with Grid Search and PCA optimizations, we found that Multinomial Naive Bayes was the fastest and simplest model and it yielded only 5% less accurate than the top model.
+
+If you have a lot of features and optimization proves to be computationally expensive, you might opt to pick Naive Bayes. If you have sufficient time and computing power and you want to optimize accuracy score, grid search with Gradient Boost is the way to go.
+
+**PART TWO:** Binary Classification for predicting if a song is a major hit based on song lyrics.
+
+**Modeling:** We wanted to predict whether or not a song was on our top song hit list. We repeated the same steps as in the genre classifier model, this time creating Top 100 list of songs as our target. The target column contains a 1 for every song that was a hit and 0 to indicate songs that were not. We ran the same models and yielded the results found below and were able to predict with 96% accuracy which songs were going to be a hit.
+
+![](https://github.com/Botafogo1894/Project3/blob/master/basic%205%20for%20binary%20problem.png)
+
+Similarly to our first model, Lemmatized performed slightly better even though the results were much closer this time when there were two choices.
+
+When we used PCA on Gaussian Naive Bayes, the performance was much lower with Multinomial Naive Bayes. So, we decided to not use PCA for further optimization because it didn't yield significant accuracy boost.
+
+## Interpreting and communicating the final results:
+
+All of our models had around 96% score. We decided to try PCA and grid search but the results indicated there was not much room for optimization, so when it comes to binary classification it appeared that we could go with either of the Top 3 performing models and not sacrifice much accuracy.
+
+**PART THREE:** Using an Unsupervised Learning model to identify distinctive topics and keywords for each genre
+
+We used gensim.corpora.Dictionary to create a frequency dictionary for the lemmed, tokenized word set. We grabbed keywords from each genre and generated a Topic Model score.
+
+Using the TFIDF Matrix we ran a Topic Modeling LDA algorithm and printed the word clouds for the top Keywords in each genre that the unsupervised algorithm identified below:
+
+![](https://github.com/Botafogo1894/Project3/blob/master/Pop_n_Metal.png)
+
+![](https://github.com/Botafogo1894/Project3/blob/master/Jazz_n_rock.png)
+
+![](https://github.com/Botafogo1894/Project3/blob/master/rnb_n_hip.png)
