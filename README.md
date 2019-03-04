@@ -9,7 +9,7 @@ Two CSV's from Kaggle: one contained 300,000 song lyrics with genres, song names
 
 ### Cleaning Data
 
-This took a long time due to the fact that the lyrics and song titles were scarped fro mdifferent places so there was a lot of messy syntax, punctuation and foreign words we had to remove from the data - most of day one and some of day two.
+This took a long time due to the fact that the lyrics and song titles were scarped from different places, so there was a lot of messy syntax, punctuation and foreign words we had to remove from the data - most of day one and some of day two.
 We used a combination of  NLTK, Pandas and regex methods for cleaning the text, stemming, lemmatizing, removing stopwords, tokenizing, appending the clean lyrics back to the Pandas DataFrame.
 
 **Exploring Data:** Looking at our Pandas Dataframe we found…
